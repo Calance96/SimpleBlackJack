@@ -1,5 +1,5 @@
-# SimpleBlackJack
-A simple black jack game (1 human player vs 1 computer player) written with C# using ASP.NET Core 3.1 MVC framework. 
+# Simple Blackjack
+A simple Blackjack game (1 human player vs 1 computer player) written with C# using ASP.NET Core 3.1 MVC framework. 
 
 The game rules are as follows:
 1. The player needs to have at least 16 points in order to stay, otherwise the player needs to draw card from the deck.
