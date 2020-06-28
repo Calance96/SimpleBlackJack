@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,7 +28,9 @@ namespace SimpleBlackJack
             services.AddSession(configs =>
             {
                 configs.IdleTimeout = TimeSpan.FromMinutes(10);
-                configs.Cookie.HttpOnly = true; 
+                configs.Cookie.HttpOnly = true;
+                configs.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+                configs.Cookie.SameSite = SameSiteMode.Strict;
                 configs.Cookie.IsEssential = true;
             });
 
