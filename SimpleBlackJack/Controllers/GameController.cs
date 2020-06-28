@@ -43,7 +43,7 @@ namespace SimpleBlackJack.Controllers
 
             if (GameSession != null)
             {
-                if (GameSession.Player.Token > 0)
+                if (GameSession.Player.Token > 0 && GameSession.Computer.Token > 0)
                 {
                     GameSession.GameStatusMessage = null;
                     GameSession.Deck.InitializeDeck();
@@ -63,7 +63,7 @@ namespace SimpleBlackJack.Controllers
                 }
                 else
                 {
-                    ErrorMessage = "Oops... You have run out of tokens...";
+                    ErrorMessage = "Oops... One participant has run out of tokens...";
                 }
             }
 
